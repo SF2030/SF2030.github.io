@@ -2,5 +2,5 @@
 This is a Chinese science fiction project,To read the novel, please click the link below :\
 https://sf2030.github.io/
 
-<img src="https://pic2.zhimg.com/50/v2-0eeb7343be12e624c4bfafd9ae585cbb_hd.jpg" alt="">
-<img src="http://wx1.sinaimg.cn/large/66b3de17ly1fyp2lvh92yg20k00b9npl.gif" alt="">
+<img src="https://pic2.zhimg.com/v2-28c92310d79e0fc3569ccb78925ed0fa_1440w.jpg?source=172ae18b" alt="">
+<img src="http://wx1.sinaimg.cn/large/66b3de17ly1fyp2lvh92yg20k00b9npl.gif" alt="gif">
