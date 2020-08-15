@@ -27,11 +27,11 @@ h1, h2, h3, h4, h5, h6 { color: #000000; font-weight: normal; }
 h1 { font-size: 36px; margin: 0 0 30px; padding: 5px 0 }
 h2 { font-size: 24px; margin: 0 0 25px; padding: 5px 0 }
 h3 { font-size: 20px; margin: 0 0 20px; padding: 0; }
-h4 { font-size: 16px; margin: 0 0 15px; padding: 0; }
-h5 { font-size: 14px; margin: 0 0 10px; padding: 0;  }
+h4 { font-size: 16px; margin: 0 0 15px; padding: 0; text-shadow: 1px 1px 15px #777777;}
+h5 { font-size: 15px; margin: 0 0 10px; padding: 0;  text-shadow: 1px 1px 13px #777777;}
 h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 
-.vr {
+.vr {        /*<!--seperate sidebar-->*/
     width:6px;
 	display:grid;
 	float: left;
@@ -40,11 +40,12 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
     position:absolute;
     top:0;
     bottom:0;
-    left:257px;
+    left:217px;
 	border-left: 1px dotted #777777;
 	border-right: 2px dotted #777777;
   	height: 100%;
-	min-height: 618%
+    box-shadow: 1px 1px 4px #555555; 
+	min-height: 760%
 }
 .cleaner { clear: both }
 .h10 { height: 10px }
@@ -58,6 +59,18 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 .float_l { float: left }
 .float_r { float: right }
 
+/* wild animal */
+#site_title { display: block; border-top:2px dotted #777777; border-bottom:2px dotted #777777;border-left:2px dotted #777777; box-shadow: 1px 1px 4px #444444; text-align: right; margin: 80px 0 40px; width: 177px; height: 32px; padding: 20px 10px; background: #706f73}
+#site_title a { font-size: 25px; text-shadow: 1px 1px 1px #444444; font-family: 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ; font-weight: 500; color: #EEEEEE }
+#site_title a span { display: block; margin-top: 5px; font-size: 12px; font-weight: 300; font-family: 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif }
+
+.effect6{position:relative;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+.effect6:before, .effect6:after{content:"";position:absolute;z-index:-1;-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);box-shadow:0 0 20px rgba(0,0,0,0.8);top:50%;bottom:0;left:10px;right:10px;-moz-border-radius:100px / 10px;border-radius:100px / 10px;}
+.effect6:after{right:10px;left:auto;-webkit-transform:skew(8deg) rotate(3deg);-moz-transform:skew(8deg) rotate(3deg);-ms-transform:skew(8deg) rotate(3deg);-o-transform:skew(8deg) rotate(3deg);transform:skew(8deg) rotate(3deg);}
+
+.effect7{position:relative;-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+.effect7:before, .effect7:after{content:"";position:absolute;z-index:-1;-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);box-shadow:0 0 20px rgba(0,0,0,0.8);top:0;bottom:0;left:10px;right:10px;-moz-border-radius:100px / 10px;border-radius:100px / 10px;}
+.effect7:after{right:10px;left:auto;-webkit-transform:skew(8deg) rotate(3deg);-moz-transform:skew(8deg) rotate(3deg);-ms-transform:skew(8deg) rotate(3deg);-o-transform:skew(8deg) rotate(3deg);transform:skew(8deg) rotate(3deg);}
 
 .tooplate_list { margin: 10px 0 10px 30px; padding: 0; list-style: decimal-leading-zero }
 .tooplate_list li { color:#302d26; margin: 0 0 10px 0; padding: 0 5px 0 0; background: url(images/tooplate_list.png) no-repeat scroll 0 5px  }
@@ -65,15 +78,15 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 .tooplate_list li a:hover { color: #302d26 }
 
 #tooplate_wrapper {
-	width: 1100px;  /* 960 main page width */
+	width: 1060px;  /* 960 main page width */
 	padding: 0 10px;
 	margin: 1 auto;  /* 0 */
 }
 
 #tooplate_sidebar {
 	position: fixed;
-	width: 240px;
-	text-align: right;
+	width: 200px;
+	text-align: right;   /* 240 context width */
 }
 
 #tooplate_main {
@@ -81,12 +94,9 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 	padding: 60px 0px 60px 40px;
 	float: right;
 }
+.col_12 { width: 420px }
 
-#site_title { display: block; text-align: right; margin: 80px 0 40px; width: 220px; height: 60px; padding: 20px 10px; background: url(images/tooplate_header.jpg) no-repeat  }
-#site_title a { font-size: 25px; text-shadow: 1px 1px 1px #444444; font-family: 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ; font-weight: 500; color: #EEEEEE }
-#site_title a span { display: block; margin-top: 5px; font-size: 12px; font-weight: 300; font-family: 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif }
-
-#tooplate_menu { width: 240px; margin-bottom: 60px; }
+#tooplate_menu { width: 200px; margin-bottom: 60px; }
 #tooplate_menu ul { margin: 0; padding: 0; list-style: none }
 #tooplate_menu ul li { margin: 0; padding: 0; font-size:12pt}
 #tooplate_menu ul li a { clear: both; display: block; float: right; position: relative;  margin-bottom: 10px; letter-spacing: 3px; color: #FFFFFF; text-shadow: 1px 1px 1px #333333; padding: 0 60px 0 30px; height: 39px; line-height: 39px; background:url(images/tooplate_menu_item_bgl.png) left no-repeat }
@@ -94,7 +104,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 
 #tooplate_menu ul li a:hover { text-decoration: none; color: #fff; text-shadow: 1px 1px 1px #000 }
 
-#tooplate_main h2 { font-size: 24px; padding-bottom: 30px; margin-bottom: 30px; background: url(images/header.png) repeat-x bottom }
+#tooplate_main h2 { font-size: 24px;  padding-bottom: 30px; margin-bottom: 30px; background: url(images/header.png) repeat-x bottom }
 
 .main_box { min-height: 300px; padding: 7px 0; margin-bottom: 30px; background: url(images/divider.png) repeat-x bottom }
 
@@ -122,4 +132,4 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; font-weight: 700 }
 #zhihu ul { margin: 0; padding: 0; list-style: none }
 #zhihu ul li { margin: 0 0 15px; padding: 0 0 15px; border-bottom: 1px dashed #665f51}
 
-.col_12 { width: 420px }
+
