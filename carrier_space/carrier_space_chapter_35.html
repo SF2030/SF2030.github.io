@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>科幻&nbsp;·『载体空间』·&nbsp;35</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style type="text/css">
+
+* html a:hover { background: transparent; }
+body { color: #181818; }
+pre { border: 0; margin: 0; padding: 0; }
+td { padding: 0; }
+table { border: 0; margin: 0; padding: 0; border-collapse: collapse; empty-cells: show; }
+span { display: inline-block; border: 0; margin: 0; }
+td.code_line div { width: 100%; padding-left: 50px; }
+span.code_gutter { vertical-align: top; }
+span.qts_spk { color:#212248;
+font-weight: normal;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:14pt;
+}
+span.qts_lnk { color:#693153;
+font-weight: bold;
+font-variant: small-caps;
+font-style: underline;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:12pt;
+text-decoration: underline ;
+}
+.code_page {
+background-color: #a59f92;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size: 14pt;
+tab-size: 4;
+line-height:180%;
+text-align:justify;
+text-justify:inter-ideograph;
+font-weight:normal;
+padding-left: 0px;
+text-shadow: 1px 1px 15px #888888
+}
+.simple_code_page { background-color: white; color: black }
+.code_gutter { display: table-cell; background-color: #a59f92;}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.normal { font-style: normal; }
+.glow { text-shadow: 0 0 3px currentColor; }
+.underline { text-decoration: underline; }
+
+.wrap {
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+.wrap span { display: inline; }
+
+div#toolbarhide {
+position: fixed;
+top: 0px;
+right: 0px;
+padding-top: 5px;
+padding-right: 10px;
+}
+div#toolbar {
+visibility: hidden;
+text-align: center;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+opacity: 0;
+-webkit-transform: translateZ(0);
+-webkit-font-smoothing: antialiased;
+-webkit-transition: all .25s ease-in;
+-moz-transition: all .25s ease-in;
+-ms-transition: all .25s ease-in;
+-o-transition: all .25s ease-in;
+transition: all .25s ease-in;
+background-color:black;
+color: white;
+}
+div#toolbarhide:hover div#toolbar {
+visibility: visible;
+opacity: .8;
+-webkit-transition: all .25s ease-out;
+-moz-transition: all .25s ease-out;
+-ms-transition: all .25s ease-out;
+-o-transition: all .25s ease-out;
+transition: all .25s ease-out;
+}
+div#toolbar img {
+display: inline-block;
+vertical-align: middle;
+border: 0;
+cursor: pointer;
+height: 16px;
+width: 16px;
+padding: 5px;
+}
+
+#tooltip {
+border-radius: 5px 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+white-space: pre-line;
+word-wrap: break-word;
+position:absolute; display:block;
+color: black;
+padding: 0.8em 1em;
+background: #FFFFE0; border: solid black;
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+font-size: 10pt;
+font-weight: bold;
+}
+
+a.annotation {
+color: #181818;
+outline: none;
+text-decoration: underline;
+}
+
+span.annotation{ display: inline; }
+
+.tooltip_hotspot { cursor:pointer; }
+
+div#comment_list {
+visibility: hidden;
+display: none;
+margin: auto auto;
+text-align: center;
+position: fixed;
+z-index: 99;
+left:0px;
+top: 0px;
+}
+div#comment_wrapper {
+max-height: 200px;
+overflow: auto;
+border: solid black;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+table#comment_table {
+border: thin solid; border-collapse: collapse;
+color: #000000; background-color: #FFFFE0; margin: auto auto;
+}
+div.table_footer { text-align:right; font-size: 8pt; font-weight: bold;}
+a.table_close { color: black; float: right; }
+a.table_close:link { text-decoration: none; }
+a.table_close:active { text-decoration: none; }
+a.table_close:visited { text-decoration: none; }
+a.table_close:hover { text-decoration: none; }
+table#comment_table th, table#comment_table td { border: thin solid; padding: 5px; }
+td.annotation_link { width: 60px; text-align: right; padding-right: 20px; }
+.annotation_comment { width: 500px; }
+div.annotation_comment {
+float: left;
+text-align: left;
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+</style>
+
+<script type="text/javascript">
+function isUndef(obj) {
+return obj === void 0;
+}
+
+function isNull(obj) {
+return obj === null;
+}
+document.oncontextmenu = function(){ return false; };
+document.onselectstart = function(){ return false; };
+document.oncopy = function(){ return false; };
+document.oncut = function(){ return false; };
+document.onpaste = function(){ return false; };
+
+</script>
+
+<noscript>
+<iframe src="*.htm"></iframe>
+</noscript>
+
+</head>
+<br><H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_34.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_36.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<hr width=100% size=2 color=#6a505c style="border:3 dashed #6a505c">
+<body class="code_page code_text"><pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tr><td valign="top" id="L_0_1" class="code_text code_gutter" style="background: #767572"><span style="color: #aaa18d;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #a59f92;"><div id="C_0_1"><span class="normal real_text" style="background-color: #a59f92; color: #181818;"> </span></div></td></tr><tr><td id="L_0_2049" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2049&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2049" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">：：：第三十五章&nbsp;&nbsp;&nbsp; 褐色球体</span>
+</div></td></tr><tr><td id="L_0_2050" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2050&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2050" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2051" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2051&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2051" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">甲虫二号此时也有了新发现，反应堆左侧的石柱，辐射强度比另外三根高出很多，汉娜操纵二号车靠近石柱，辐射仪成像显示，两米多高的石柱，由上向下分布着九个橙色亮斑。汉娜打开机械臂上的毫米波透测仪，贴近石柱，扫描其内部结构，透测图像与辐射成像吻合，一列球体嵌在石柱中。</span>
+</div></td></tr><tr><td id="L_0_2052" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2052&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2052" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2053" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2053&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2053" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">这些球体似乎是某种放射源。</span>”秦翀话音未落，石柱侧壁毫无征兆地打开了，露出九个镂空的石头格子，每个格子里悬浮着一颗褐色球体，石柱底部是个通往地下的洞。</span>
+</div></td></tr><tr><td id="L_0_2054" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2054&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2054" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;"><span class="qts_lnk"> <img src="https://s1.ax1x.com/2020/10/04/0JeY1s.jpg" style="width:694px;height:390px;" alt="〔⦂⏿〕" ></span></span>
+</div></td></tr><tr><td id="L_0_2055" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2055&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2055" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">机械爪是不是碰到了石柱，触发了什么？</span>”</span>
+</div></td></tr><tr><td id="L_0_2056" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2056&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2056" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜：“<span class="qts_spk">没，刚才只是贴近透测扫描，全都是非接触性操作。</span>”</span>
+</div></td></tr><tr><td id="L_0_2057" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2057&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2057" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">难道毫米波触发了石柱里面的机关？</span>”</span>
+</div></td></tr><tr><td id="L_0_2058" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2058&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2058" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken盯着意外被打开的石柱有些不安：“<span class="qts_spk">我们似乎打开了不该打开的东西，必须想办法把这石头柱子关上。</span>”</span>
+</div></td></tr><tr><td id="L_0_2059" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2059&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2059" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">打都打开了，要不先看看这些褐色球体到底是什么东西？</span>”秦翀。</span>
+</div></td></tr><tr><td id="L_0_2060" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2060&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2060" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2061" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2061&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2061" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken想了想没有反对，汉娜操控机械臂，慢慢靠近其中一颗悬浮的褐色球体，正打算用毫米波透测其内部结构，突然，褐色球体从石头格子里飞出来，吸在机械爪上。</span>
+</div></td></tr><tr><td id="L_0_2062" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2062&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2062" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">停！停！停！</span>”Ken大声命令。</span>
+</div></td></tr><tr><td id="L_0_2063" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2063&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2063" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">这球体好像有磁性，被不锈钢机械爪吸出来了！</span>”秦翀。</span>
+</div></td></tr><tr><td id="L_0_2064" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2064&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2064" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">遭了！</span>”Ken的脑门开始冒汗，“<span class="qts_spk">得想办法把它放回去，这东西我们不该碰！</span>”</span>
+</div></td></tr><tr><td id="L_0_2065" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2065&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2065" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2066" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2066&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2066" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜小心翼翼将吸着褐色球体的机械爪，伸进石头格子，可褐色球体粘在机械爪上就是不下来，汉娜轻轻晃动机械臂，忽然，相邻石格里的褐色球体也飞了出来，吸在机械臂关节处，同时，石柱侧壁开始慢慢关闭。</span>
+</div></td></tr><tr><td id="L_0_2067" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2067&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2067" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">快，快把机械爪收回来！</span>”Ken急得站了起来。</span>
+</div></td></tr><tr><td id="L_0_2068" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2068&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2068" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">太晚了！这是三分钟前的图像。</span>”汉娜。</span>
+</div></td></tr><tr><td id="L_0_2069" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2069&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2069" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">有通讯延迟的情况下，被操作对象行为如果无法预期，根本不适合直接远程操作。</span>”秦翀马后炮。</span>
+</div></td></tr><tr><td id="L_0_2070" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2070&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2070" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2071" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2071&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2071" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜停止了所有操作，三个人的心悬着，等待最新的反馈图像，几分钟后，只见控制台屏幕上显示，甲虫二号的机械臂末端，耷拉着一束被扯断的电线，机械爪不见了，机械臂关节上吸着一颗褐色球体，刚才打开的石柱也完全关闭了。</span>
+</div></td></tr><tr><td id="L_0_2072" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2072&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2072" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">机械爪哪去了？</span>”汉娜。</span>
+</div></td></tr><tr><td id="L_0_2073" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2073&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2073" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">后辙二号车，先后辙！</span>”Ken有点着急上火。</span>
+</div></td></tr><tr><td id="L_0_2074" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2074&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2074" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜照做，二号车退到五米之外。</span>
+</div></td></tr><tr><td id="L_0_2075" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2075&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2075" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">透测扫描石柱。</span>”</span>
+</div></td></tr><tr><td id="L_0_2076" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2076&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2076" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">只见刚才操作过的石头格子里，有个形状不规则的物体，其上方相邻的石头格子空空如也。</span>
+</div></td></tr><tr><td id="L_0_2077" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2077&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2077" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2078" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2078&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2078" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">肯定是石柱关闭时夹断了机械爪，与褐色球体一起被卡在里面了，上面石格里的球体，被机械臂钢质关节吸了出来。</span>”</span>
+</div></td></tr><tr><td id="L_0_2079" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2079&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2079" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">现在怎么办？</span>”汉娜。</span>
+</div></td></tr><tr><td id="L_0_2080" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2080&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2080" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">没有专用设备，很难把这个磁性球体放回去，而且机械爪断了。</span>”</span>
+</div></td></tr><tr><td id="L_0_2081" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2081&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2081" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜：“<span class="qts_spk">我们都不清楚，到底是什么触发了石柱打开，关闭…</span>”</span>
+</div></td></tr><tr><td id="L_0_2082" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2082&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2082" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">如果再蒙着操作，恐怕另外几个球体也会给弄出来。</span>”Ken瘫坐到椅子上，“<span class="qts_spk">把二号车退到穹顶大厅入口，扫描测量整个石丘的红外辐射值。</span>”</span>
+</div></td></tr><tr><td id="L_0_2083" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2083&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2083" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀把新扫描的红外数据和之前一号车测量的数据作对比，没有任何变化，看到这个结果，Ken稍稍松口气。</span>
+</div></td></tr><tr><td id="L_0_2084" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2084&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2084" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2085" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2085&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2085" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">我们似乎没有把核反应堆搞歇菜。</span>”</span>
+</div></td></tr><tr><td id="L_0_2086" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2086&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2086" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">现在只能寄希望于那个被吸出来的球体，不是反应堆的关键部件。</span>”</span>
+</div></td></tr><tr><td id="L_0_2087" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2087&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2087" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">或许只是块核废料。</span>”</span>
+</div></td></tr><tr><td id="L_0_2088" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2088&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2088" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜指着辐射测量仪，说道：“<span class="qts_spk">你们发现没有，吸在机械臂上的褐色球体，放射性消失了。</span>”</span>
+</div></td></tr><tr><td id="L_0_2089" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2089&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2089" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀：“<span class="qts_spk">可能只有在石柱里面，它的放射性才会被激发。</span>”</span>
+</div></td></tr><tr><td id="L_0_2090" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2090&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2090" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">我们怎么处理这个东西？</span>”汉娜。</span>
+</div></td></tr><tr><td id="L_0_2091" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2091&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2091" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">唉，还能怎么处理，装上木蜂号的采样返回舱送回来，下次发射信使舱时，运回地球，让吴佑問他们看看这到底是什么东西。</span>”</span>
+</div></td></tr><tr><td id="L_0_2092" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2092&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2092" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2093" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2093&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2093" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">失去机械爪的甲虫二号，携着褐色球体退出地下穹顶大厅，回到木蜂号母船着陆点待命。</span>
+</div></td></tr><tr><td id="L_0_2094" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2094&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2094" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">木蜂号根据陨石星系示意图，对空观测了二十小时，终于发现环绕x17运行的那个物体，其轨道高度七百二十公里，周期稳定。因为物体太小，在木蜂号望远镜的感光元件上，成像仅有几个像素，无法判断是人造物体还是轨道上的石头。</span>
+</div></td></tr><tr><td id="L_0_2095" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2095&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2095" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2096" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2096&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2096" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken、秦翀、汉娜三人开了次会，决定降低探矿任务的优先级，不再顾忌探测器的推进剂使用量，计划让木蜂号从x17起飞，抵近轨道上的那个神秘物体，看看究竟是什么。木蜂号起飞前，只回收了功能完好的甲虫一号探测车，断了前爪的伤兵甲虫二号，被留在了x17，那块绘有星图的陨石，从此多了个伴。</span>
+</div></td></tr><tr><td id="L_0_2097" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2097&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2097" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2098" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2098&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2098" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2099" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2099&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2099" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2100" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2100&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2100" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span></div></td></tr></table></td></tr></table></pre><div id="toolbarhide"><div id="toolbar"></div></div>
+
+<script type="text/javascript">
+var page_line_info = {
+wrap: false,
+ranges: null,
+wrap_size: null,
+tables: null,
+header: null,
+gutter: false,
+table_mode: true
+};
+
+function wrap_code() {
+var width = 0,
+mode = null,
+start, end, i, j, idx, el;
+
+if (page_line_info.header) {
+el = document.getElementById("file_info");
+el.style.width = page_line_info.wrap_size + "px";
+el.className = "wrap";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+if (isNull(mode)) {
+mode = true;
+if (page_line_info.gutter) {
+width = document.getElementById("L_" + idx + "_" + j).offsetWidth;
+}
+}
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = (page_line_info.wrap_size - width) + "px";
+el.className = page_line_info.table_mode ? "wrap" : "wrap code_line";
+}
+}
+}
+
+function toggle_gutter() {
+var default_mode = page_line_info.table_mode ? 'table-cell' : 'inline-block',
+mode = null,
+i, j, rows, r, tbls, cells;
+items = document.querySelectorAll('.code_gutter');
+/* alert(document.getElementsByClassName("code_page").style("textShadow"));*/
+for (i = 0; i < items.length; ++i) {
+if (isNull(mode)) {
+if (page_line_info.gutter) {
+mode = 'contents';
+page_line_info.gutter = false;
+page_line_info.wrap_size = 712;
+} else {
+mode = 'table-cell';
+page_line_info.gutter = true;
+page_line_info.wrap_size = 780;
+}
+}
+items[i].style.display = mode;
+}
+if (page_line_info.wrap && !isNull(mode)) {
+setTimeout(function() {wrap_code();}, 500);
+}
+}
+
+function unwrap_code() {
+var i, j, idx, start, end, el;
+
+if (page_line_info.header) {
+document.getElementById("file_info").style.width = "100%";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = "100%";
+el.className = "";
+}
+}
+}
+
+function toggle_wrapping() {
+if (page_line_info.wrap) {
+page_line_info.wrap = false;
+unwrap_code();
+} else {
+page_line_info.wrap = true;
+wrap_code();
+}
+}
+
+page_line_info.wrap       = false;
+page_line_info.wrap_size  = 780;
+page_line_info.tables     = 1;
+page_line_info.header     = false;
+page_line_info.gutter     = true;
+page_line_info.table_mode = true;
+page_line_info.ranges     = [[2049,999999]];
+</script>
+<script type="text/javascript">
+toggle_wrapping();
+</script>
+</body>
+<body topmargin="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+</body>
+<br>
+<hr align="center" width=100% size=2 color=#6a505c style="border:3 dashed #6a505c; ">
+
+<H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_34.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_36.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<br><br>
+</html>

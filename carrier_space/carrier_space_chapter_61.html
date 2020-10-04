@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>科幻&nbsp;·『载体空间』·&nbsp;61</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style type="text/css">
+
+* html a:hover { background: transparent; }
+body { color: #181818; }
+pre { border: 0; margin: 0; padding: 0; }
+td { padding: 0; }
+table { border: 0; margin: 0; padding: 0; border-collapse: collapse; empty-cells: show; }
+span { display: inline-block; border: 0; margin: 0; }
+td.code_line div { width: 100%; padding-left: 50px; }
+span.code_gutter { vertical-align: top; }
+span.qts_spk { color:#212248;
+font-weight: normal;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:14pt;
+}
+span.qts_lnk { color:#693153;
+font-weight: bold;
+font-variant: small-caps;
+font-style: underline;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:12pt;
+text-decoration: underline ;
+}
+.code_page {
+background-color: #a59f92;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size: 14pt;
+tab-size: 4;
+line-height:180%;
+text-align:justify;
+text-justify:inter-ideograph;
+font-weight:normal;
+padding-left: 0px;
+text-shadow: 1px 1px 15px #888888
+}
+.simple_code_page { background-color: white; color: black }
+.code_gutter { display: table-cell; background-color: #a59f92;}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.normal { font-style: normal; }
+.glow { text-shadow: 0 0 3px currentColor; }
+.underline { text-decoration: underline; }
+
+.wrap {
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+.wrap span { display: inline; }
+
+div#toolbarhide {
+position: fixed;
+top: 0px;
+right: 0px;
+padding-top: 5px;
+padding-right: 10px;
+}
+div#toolbar {
+visibility: hidden;
+text-align: center;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+opacity: 0;
+-webkit-transform: translateZ(0);
+-webkit-font-smoothing: antialiased;
+-webkit-transition: all .25s ease-in;
+-moz-transition: all .25s ease-in;
+-ms-transition: all .25s ease-in;
+-o-transition: all .25s ease-in;
+transition: all .25s ease-in;
+background-color:black;
+color: white;
+}
+div#toolbarhide:hover div#toolbar {
+visibility: visible;
+opacity: .8;
+-webkit-transition: all .25s ease-out;
+-moz-transition: all .25s ease-out;
+-ms-transition: all .25s ease-out;
+-o-transition: all .25s ease-out;
+transition: all .25s ease-out;
+}
+div#toolbar img {
+display: inline-block;
+vertical-align: middle;
+border: 0;
+cursor: pointer;
+height: 16px;
+width: 16px;
+padding: 5px;
+}
+
+#tooltip {
+border-radius: 5px 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+white-space: pre-line;
+word-wrap: break-word;
+position:absolute; display:block;
+color: black;
+padding: 0.8em 1em;
+background: #FFFFE0; border: solid black;
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+font-size: 10pt;
+font-weight: bold;
+}
+
+a.annotation {
+color: #181818;
+outline: none;
+text-decoration: underline;
+}
+
+span.annotation{ display: inline; }
+
+.tooltip_hotspot { cursor:pointer; }
+
+div#comment_list {
+visibility: hidden;
+display: none;
+margin: auto auto;
+text-align: center;
+position: fixed;
+z-index: 99;
+left:0px;
+top: 0px;
+}
+div#comment_wrapper {
+max-height: 200px;
+overflow: auto;
+border: solid black;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+table#comment_table {
+border: thin solid; border-collapse: collapse;
+color: #000000; background-color: #FFFFE0; margin: auto auto;
+}
+div.table_footer { text-align:right; font-size: 8pt; font-weight: bold;}
+a.table_close { color: black; float: right; }
+a.table_close:link { text-decoration: none; }
+a.table_close:active { text-decoration: none; }
+a.table_close:visited { text-decoration: none; }
+a.table_close:hover { text-decoration: none; }
+table#comment_table th, table#comment_table td { border: thin solid; padding: 5px; }
+td.annotation_link { width: 60px; text-align: right; padding-right: 20px; }
+.annotation_comment { width: 500px; }
+div.annotation_comment {
+float: left;
+text-align: left;
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+</style>
+
+<script type="text/javascript">
+function isUndef(obj) {
+return obj === void 0;
+}
+
+function isNull(obj) {
+return obj === null;
+}
+document.oncontextmenu = function(){ return false; };
+document.onselectstart = function(){ return false; };
+document.oncopy = function(){ return false; };
+document.oncut = function(){ return false; };
+document.onpaste = function(){ return false; };
+
+</script>
+
+<noscript>
+<iframe src="*.htm"></iframe>
+</noscript>
+
+</head>
+<br><H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_60.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_62.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<hr width=100% size=2 color=#6a505c style="border:3 dashed #6a505c">
+<body class="code_page code_text"><pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tr><td valign="top" id="L_0_1" class="code_text code_gutter" style="background: #767572"><span style="color: #aaa18d;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #a59f92;"><div id="C_0_1"><span class="normal real_text" style="background-color: #a59f92; color: #181818;"> </span></div></td></tr><tr><td id="L_0_3442" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3442&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3442" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">：：：第六十一章&nbsp;&nbsp;&nbsp; 投诚阴谋</span>
+</div></td></tr><tr><td id="L_0_3443" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3443&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3443" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3444" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3444&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3444" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦从回忆中回到现实：“<span class="qts_spk">锎战争重创了地球生态圈，人们苟且偷生，掰着手指头算日子，期盼能多熬过几个放射性污染物半哀期。锎战争爆发时，乙宸计划殖民任务处于收尾阶段，锎战争之后，最后几批志愿者抵达N31，他们带来了地球空气被全面污染的消息，荣归派起初不相信，但随着最后几批志愿者带来的影像资料越来越多，地球空气被污染的事实逐渐明了。证据面前，荣归派不得不承认地球上发生了锎战争，他们中的一些人不再哭着喊着要回地球。</span>”</span>
+</div></td></tr><tr><td id="L_0_3445" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3445&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3445" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3446" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3446&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3446" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">ken：“<span class="qts_spk">如果荣归派放弃返回地球，那还叫什么荣归派，他们的组织岂不很快就会崩溃。</span>”</span>
+</div></td></tr><tr><td id="L_0_3447" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3447&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3447" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦：“<span class="qts_spk">事情没那么简单，最早那批荣归派，要么屈服、回归了静谷，要么安于现状，混吃等死。如今荣归派的中坚力量，大多是在N31出生的一代年轻人，他们从未去过地球，所有关于地球的信息，都是从上一代荣归派那里道听途说，所以他们更执着、向往心目中的虚幻世界，正因为荣归派的年轻化，他们一直没有放弃送信使舱回地球、在地球上公布Ks理论的想法。他们甚至策划绑架汉娜，以为汉娜知道Ks理论公式，真是明知不可为而为之。</span>”</span>
+</div></td></tr><tr><td id="L_0_3448" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3448&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3448" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">我看荣归派这是揣着明白当糊涂，假装不知道Ks理论已经失传，只能继续执拗寻找Ks公式，否则荣归派这群乌合之众没有办法维持下去。</span>”</span>
+</div></td></tr><tr><td id="L_0_3449" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3449&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3449" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3450" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3450&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3450" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦点点头：“<span class="qts_spk">不破不立，荣归派一部分人虽然表面上放弃了返回地球的诉求，但他们喊出了更高大上的口号：找到Ks理论公式，发回地球，拯救人类！</span>”</span>
+</div></td></tr><tr><td id="L_0_3451" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3451&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3451" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken：“<span class="qts_spk">呵呵，如果他们能做到的话，或许真能帮助地球上那些人寻找一个新世界，免遭放射性空气摧残。</span>”</span>
+</div></td></tr><tr><td id="L_0_3452" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3452&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3452" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3453" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3453&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3453" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛论：“<span class="qts_spk">所以呀，他们的口号很有蛊惑性，Ken，你没参与乙宸计划早期的项目，或许不了解宜居行星有多么难找，素茹会当初花了近二十年时间，把太阳系附近能观测到的类地行星分析个遍，才找到N31。另外Ks理论单次最大穿行距离不到三十光年，吴佑問教授生前一直在研究如何突破这一距离限制，可惜…要是荣归派真的在地球上公布Ks理论，N31必将成为地球政府扩张的首选目标，我们这里适合居住的区域仅限于晨昏线附近，有天然避风条件，可以建立定居点的地方屈指可数。若N31被地球政府接管，仍按地球以前那种不断追求经济扩张的模式发展，用不了多久，N31必将重蹈地球的覆辙。</span>”</span>
+</div></td></tr><tr><td id="L_0_3454" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3454&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3454" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken和秦翀皱眉思索，沉默不语。</span>
+</div></td></tr><tr><td id="L_0_3455" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3455&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3455" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3456" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3456&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3456" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">一周后，秦翀随一队维修人员，来到两百多公里外的星河湾殖民点，见习盐业组的机电设备维修任务，盐业组组长正是当年在帝都协助自己逃跑的史密斯。</span>
+</div></td></tr><tr><td id="L_0_3457" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3457&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3457" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3458" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3458&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3458" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">几天前，翡翠岭欢迎晚宴上，秦翀没有看到黎晓瑗，以为黎晓瑗在星河湾轮值，可几天忙下来，一直没有看到想见的人。秦翀忍不住向盐业组组长史密斯打听黎晓瑗的下落，史密斯告诉秦翀，九年前，黎晓瑗乘坐的载人舱，降落时出了差错，落到了N31背面的某个位置，和另外五名船员一起失踪了。当时殖民地没有技术能力，深入N31背面的严寒之地去救援，等到一年后，黎晓瑗的丈夫埃瑞克才勉强集齐装备，去行星背面寻找失踪的妻子和另外五名船员，但搜救行动以失败告终，埃瑞克被冻伤，失去了两根脚趾…</span>
+</div></td></tr><tr><td id="L_0_3459" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3459&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3459" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">又是一个悲伤的故事，秦翀心底难过了好几天。</span>
+</div></td></tr><tr><td id="L_0_3460" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3460&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3460" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3461" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3461&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3461" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">经过几周见习，Ken和秦翀渐渐熟悉了殖民地的生产生活模式，静谷市政厅正式对外宣布，十九年前，执行小行星探矿任务失踪的两位探索组队员Ken和秦翀，因误入小行星轨道上的时空漩涡，导致探矿飞船惠施号发生时空错乱，两位队员经过不懈努力终于又回到N31。素茹会关于Ken和秦翀的声明听起来牵强科幻，但当大家看到两位依旧年轻的殖民地先驱者，崇敬之情代替了疑虑。Ken被安排到静谷科学院工作，秦翀去了机电组，两人努力适应新生活。</span>
+</div></td></tr><tr><td id="L_0_3462" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3462&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3462" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3463" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3463&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3463" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">时间不知不觉过去半个月，一天晚上，洛伦派人请秦翀去翡翠岭开会。来到小会议室，洛伦和Ken已经等在那里。洛伦开门见山：“<span class="qts_spk">我们在铁矿山的卧底传来消息，荣归派出现内讧，被打压的一个头目和十几名成员想离开铁矿山回静谷生活。</span>”</span>
+</div></td></tr><tr><td id="L_0_3464" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3464&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3464" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">﻿“<span class="qts_spk">你意思是荣归派有人想投诚？</span>”秦翀。</span>
+</div></td></tr><tr><td id="L_0_3465" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3465&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3465" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦点点头：“<span class="qts_spk">类似情况以前已发生过几次，盘踞铁矿山的并非都是死硬分子，有些人是被忽悠过去的，时间久了，认清了荣归派的真面目，自然想脱离铁矿山回静谷。这次，我们制定了接应计划，需要你们两位帮个忙。</span>”</span>
+</div></td></tr><tr><td id="L_0_3466" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3466&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3466" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">需要我们帮忙？</span>”Ken。</span>
+</div></td></tr><tr><td id="L_0_3467" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3467&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3467" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3468" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3468&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3468" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦：“<span class="qts_spk">对，投诚人员里面有位代号U3的仓库保管员，他知道被荣归派抢走的信使舱隐藏位置，这次任务除了接应投诚人员返回静谷，还要夺回信使舱。目前殖民地的多轴飞行器载重和续航能力十分有限，无法从空中运走信使舱，由地面运送风险又太大，所以想请二位驾驶惠施号，协助仓库保管员U3，把信使舱运回来。</span>”</span>
+</div></td></tr><tr><td id="L_0_3469" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3469&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3469" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">好，没问题，夺回信使舱，荣归派就猖狂不了几天了。</span>”秦翀。</span>
+</div></td></tr><tr><td id="L_0_3470" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3470&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3470" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦：“<span class="qts_spk">你们只要在空中待命，收到确认信号，飞去指定地点，从空中吊装信使舱，运回静谷就算完成任务，投诚人员接应事宜，不用你们操心。</span>”</span>
+</div></td></tr><tr><td id="L_0_3471" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3471&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3471" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken抽了口烟，点点头。</span>
+</div></td></tr><tr><td id="L_0_3472" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3472&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3472" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3473" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3473&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3473" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">两天后“<span class="qts_spk">夜里</span>”，起了风，乌云蔽日，天地间灰蒙蒙一片。</span>
+</div></td></tr><tr><td id="L_0_3474" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3474&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3474" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦和副手老韩带领一队人马朝铁矿山方向进发。秦翀和Ken从秘密仓库驾驶惠施号悄悄升空，飞到云层上方待命。洛伦的接应小队与投诚人员在预定地点准时汇合，两队变作一队，几十人匆匆往回赶，没遭遇到预想中的追击和拦截，整个过程出人意料的顺利。</span>
+</div></td></tr><tr><td id="L_0_3475" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3475&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3475" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3476" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3476&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3476" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">于此同时，洛伦派出的联络员十一号治安官小李，只身一人潜入铁矿山腹地，在一座山丘后面找到接头人——仓库保管员U3。小李跟随U3翻过一座小山包，来到一处岩洞，岩洞入口有个简易木屋，里面传出阵阵鼾声，二人轻手轻脚潜入岩洞，小李看到岩洞里堆放着大量陶罐。</span>
+</div></td></tr><tr><td id="L_0_3477" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3477&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3477" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3478" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3478&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3478" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">这些都是机车党储藏的玉米，酿造酒精的原料。</span>”U3搬开洞穴一角的几个罐子，露出只大箱子，U3找来准备好的小推车，和小李一起把木箱装上去，推着箱子往外走。岩洞地面很粗糙，小推车发出“<span class="qts_spk">咯噔咯噔</span>”的声音，小李紧张得脑门冒汗，心砰砰直跳。</span>
+</div></td></tr><tr><td id="L_0_3479" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3479&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3479" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">U3：“<span class="qts_spk">放心，晚饭我下了药，今天门口当班那两位，至少睡到明天中午。</span>”</span>
+</div></td></tr><tr><td id="L_0_3480" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3480&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3480" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3481" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3481&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3481" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">伴着呼呼风声，二人拉着木箱来到一处空地，小李给惠施号发出信号，不到五分钟，惠施号悄无声息飞抵汇合地点，从云层中降下来，悬停在树梢高度，U3看到头顶幽一样的惠施号，被惊到了。</span>
+</div></td></tr><tr><td id="L_0_3482" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3482&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3482" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">这是什么高科技，咋一点声都没有？</span>”U3指着惠施号问小李。</span>
+</div></td></tr><tr><td id="L_0_3483" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3483&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3483" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">先装东西，回静谷再跟你说。</span>”小李。</span>
+</div></td></tr><tr><td id="L_0_3484" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3484&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3484" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3485" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3485&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3485" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀从惠施号上抛下绳索，打手势让二人吊装信使舱。</span>
+</div></td></tr><tr><td id="L_0_3486" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3486&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3486" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">小李忙前忙后用绳索固定木箱，U3此时悄悄从箱子底部的活门里拉出一根粗铁链，钩住地上一个藏着的大铁钩。小李固定好木箱，打手势给秦翀，示意可以起吊了，惠施号缓缓上升，秦翀趴在舱口观察货物吊装情况。</span>
+</div></td></tr><tr><td id="L_0_3487" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3487&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3487" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">哗啦</span>”，箱子底部的粗铁链被锚在地上的铁钩拉直，惠施号无法继续上升。</span>
+</div></td></tr><tr><td id="L_0_3488" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3488&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3488" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3489" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3489&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3489" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">怎么回事，吊不动了？</span>”Ken问道。</span>
+</div></td></tr><tr><td id="L_0_3490" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3490&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3490" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀从舱口探出半个身子观察下面情况，只见小李和U3正抱一起，在地上翻滚扭打成一团。秦翀从上方无法看到木箱底部的铁链，没想到只几秒钟，情况就急转直下，秦翀一脸懵，知道下面出事了，还没等惠施号上的二人做出反应，“<span class="qts_spk">嗵</span>”一声，旁边树上抛射过来一张大网，罩住惠施号。同时，大树旁边一片棕蕨草皮被掀开，四辆机车显现，骤然传来发动机启动的声音，就听有人喊道：“<span class="qts_spk">兄弟们，把它给我拉下来！</span>”机车轰鸣，使劲拉网。</span>
+</div></td></tr><tr><td id="L_0_3491" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3491&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3491" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3492" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3492&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3492" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">中埋伏了！</span>”秦翀忙掏出刀子，割吊装木箱的绳索，Ken在舱里试了几次增加惠施号推力，都没什么效果，惠施号被困网中，欲飞不能。</span>
+</div></td></tr><tr><td id="L_0_3493" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3493&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3493" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">抓紧了！</span>”Ken冲趴在舱口的秦翀喊道，然后稍稍降惠施号的推力，再猛然增大推力，吊装木箱的绳索已被秦翀割断五分之四，经这么一折腾，“<span class="qts_spk">嘭</span>”一声，绳索绷断了，阻止惠施号上升的主要拉力被消除，惠施号猛然一歪，秦翀被甩出舱外，挂在网上，惠施号拖着网吃力斜行，与地面上的四辆机车展开拔河比赛，秦翀的呼救声被机车轰鸣声掩盖。</span>
+</div></td></tr><tr><td id="L_0_3494" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3494&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3494" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3495" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3495&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3495" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">机车引擎声嘶力竭发出阵阵怪啸，四辆车被惠施号拖着慢慢倒行，摩托轮胎与地面剧烈摩擦，冒出阵阵蓝烟，四名机车党被呛得直咳嗽，就听有人喊：“<span class="qts_spk">不行了，抗不住了！抗不住了！砍绳！</span>”</span>
+</div></td></tr><tr><td id="L_0_3496" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3496&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3496" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3497" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3497&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3497" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">嘭</span>”一声，连接摩托和套网之间的绳索被砍断，惠施号猛地蹿出去，失去拉力的套网从船舱上滑脱，惠施号升到云层上方。</span>
+</div></td></tr><tr><td id="L_0_3498" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3498&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3498" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">秦翀，秦翀！</span>”Ken松开操纵杆，回头找寻同伴，身后却空空如也。</span>
+</div></td></tr><tr><td id="L_0_3499" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3499&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3499" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀被缠在网里，从空中飘落，在大树上挂了一下，扯断几根树枝，重重摔到地上，昏死过去。</span>
+</div></td></tr><tr><td id="L_0_3500" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3500&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3500" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3501" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3501&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3501" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3502" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3502&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3502" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3503" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3503&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3503" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span></div></td></tr></table></td></tr></table></pre><div id="toolbarhide"><div id="toolbar"></div></div>
+
+<script type="text/javascript">
+var page_line_info = {
+wrap: false,
+ranges: null,
+wrap_size: null,
+tables: null,
+header: null,
+gutter: false,
+table_mode: true
+};
+
+function wrap_code() {
+var width = 0,
+mode = null,
+start, end, i, j, idx, el;
+
+if (page_line_info.header) {
+el = document.getElementById("file_info");
+el.style.width = page_line_info.wrap_size + "px";
+el.className = "wrap";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+if (isNull(mode)) {
+mode = true;
+if (page_line_info.gutter) {
+width = document.getElementById("L_" + idx + "_" + j).offsetWidth;
+}
+}
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = (page_line_info.wrap_size - width) + "px";
+el.className = page_line_info.table_mode ? "wrap" : "wrap code_line";
+}
+}
+}
+
+function toggle_gutter() {
+var default_mode = page_line_info.table_mode ? 'table-cell' : 'inline-block',
+mode = null,
+i, j, rows, r, tbls, cells;
+items = document.querySelectorAll('.code_gutter');
+/* alert(document.getElementsByClassName("code_page").style("textShadow"));*/
+for (i = 0; i < items.length; ++i) {
+if (isNull(mode)) {
+if (page_line_info.gutter) {
+mode = 'contents';
+page_line_info.gutter = false;
+page_line_info.wrap_size = 712;
+} else {
+mode = 'table-cell';
+page_line_info.gutter = true;
+page_line_info.wrap_size = 780;
+}
+}
+items[i].style.display = mode;
+}
+if (page_line_info.wrap && !isNull(mode)) {
+setTimeout(function() {wrap_code();}, 500);
+}
+}
+
+function unwrap_code() {
+var i, j, idx, start, end, el;
+
+if (page_line_info.header) {
+document.getElementById("file_info").style.width = "100%";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = "100%";
+el.className = "";
+}
+}
+}
+
+function toggle_wrapping() {
+if (page_line_info.wrap) {
+page_line_info.wrap = false;
+unwrap_code();
+} else {
+page_line_info.wrap = true;
+wrap_code();
+}
+}
+
+page_line_info.wrap       = false;
+page_line_info.wrap_size  = 780;
+page_line_info.tables     = 1;
+page_line_info.header     = false;
+page_line_info.gutter     = true;
+page_line_info.table_mode = true;
+page_line_info.ranges     = [[3442,999999]];
+</script>
+<script type="text/javascript">
+toggle_wrapping();
+</script>
+</body>
+<body topmargin="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+</body>
+<br>
+<hr align="center" width=100% size=2 color=#6a505c style="border:3 dashed #6a505c; ">
+
+<H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_60.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_62.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<br><br>
+</html>

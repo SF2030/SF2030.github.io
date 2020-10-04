@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>科幻&nbsp;·『载体空间』·&nbsp;52</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style type="text/css">
+
+* html a:hover { background: transparent; }
+body { color: #181818; }
+pre { border: 0; margin: 0; padding: 0; }
+td { padding: 0; }
+table { border: 0; margin: 0; padding: 0; border-collapse: collapse; empty-cells: show; }
+span { display: inline-block; border: 0; margin: 0; }
+td.code_line div { width: 100%; padding-left: 50px; }
+span.code_gutter { vertical-align: top; }
+span.qts_spk { color:#212248;
+font-weight: normal;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:14pt;
+}
+span.qts_lnk { color:#693153;
+font-weight: bold;
+font-variant: small-caps;
+font-style: underline;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size:12pt;
+text-decoration: underline ;
+}
+.code_page {
+background-color: #a59f92;
+font-family: Monospace, 'Monospace', 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', Helvetica,  'Courier', 'STHeiti', 'STXihei', 'Heiti SC', Arial, sans-serif ;
+font-size: 14pt;
+tab-size: 4;
+line-height:180%;
+text-align:justify;
+text-justify:inter-ideograph;
+font-weight:normal;
+padding-left: 0px;
+text-shadow: 1px 1px 15px #888888
+}
+.simple_code_page { background-color: white; color: black }
+.code_gutter { display: table-cell; background-color: #a59f92;}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.normal { font-style: normal; }
+.glow { text-shadow: 0 0 3px currentColor; }
+.underline { text-decoration: underline; }
+
+.wrap {
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+.wrap span { display: inline; }
+
+div#toolbarhide {
+position: fixed;
+top: 0px;
+right: 0px;
+padding-top: 5px;
+padding-right: 10px;
+}
+div#toolbar {
+visibility: hidden;
+text-align: center;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+opacity: 0;
+-webkit-transform: translateZ(0);
+-webkit-font-smoothing: antialiased;
+-webkit-transition: all .25s ease-in;
+-moz-transition: all .25s ease-in;
+-ms-transition: all .25s ease-in;
+-o-transition: all .25s ease-in;
+transition: all .25s ease-in;
+background-color:black;
+color: white;
+}
+div#toolbarhide:hover div#toolbar {
+visibility: visible;
+opacity: .8;
+-webkit-transition: all .25s ease-out;
+-moz-transition: all .25s ease-out;
+-ms-transition: all .25s ease-out;
+-o-transition: all .25s ease-out;
+transition: all .25s ease-out;
+}
+div#toolbar img {
+display: inline-block;
+vertical-align: middle;
+border: 0;
+cursor: pointer;
+height: 16px;
+width: 16px;
+padding: 5px;
+}
+
+#tooltip {
+border-radius: 5px 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+white-space: pre-line;
+word-wrap: break-word;
+position:absolute; display:block;
+color: black;
+padding: 0.8em 1em;
+background: #FFFFE0; border: solid black;
+font-family: Calibri, Tahoma, Geneva, sans-serif;
+font-size: 10pt;
+font-weight: bold;
+}
+
+a.annotation {
+color: #181818;
+outline: none;
+text-decoration: underline;
+}
+
+span.annotation{ display: inline; }
+
+.tooltip_hotspot { cursor:pointer; }
+
+div#comment_list {
+visibility: hidden;
+display: none;
+margin: auto auto;
+text-align: center;
+position: fixed;
+z-index: 99;
+left:0px;
+top: 0px;
+}
+div#comment_wrapper {
+max-height: 200px;
+overflow: auto;
+border: solid black;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+table#comment_table {
+border: thin solid; border-collapse: collapse;
+color: #000000; background-color: #FFFFE0; margin: auto auto;
+}
+div.table_footer { text-align:right; font-size: 8pt; font-weight: bold;}
+a.table_close { color: black; float: right; }
+a.table_close:link { text-decoration: none; }
+a.table_close:active { text-decoration: none; }
+a.table_close:visited { text-decoration: none; }
+a.table_close:hover { text-decoration: none; }
+table#comment_table th, table#comment_table td { border: thin solid; padding: 5px; }
+td.annotation_link { width: 60px; text-align: right; padding-right: 20px; }
+.annotation_comment { width: 500px; }
+div.annotation_comment {
+float: left;
+text-align: left;
+white-space: -moz-pre-wrap;
+white-space: -hp-pre-wrap;
+white-space: -o-pre-wrap;
+white-space: -pre-wrap;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+</style>
+
+<script type="text/javascript">
+function isUndef(obj) {
+return obj === void 0;
+}
+
+function isNull(obj) {
+return obj === null;
+}
+document.oncontextmenu = function(){ return false; };
+document.onselectstart = function(){ return false; };
+document.oncopy = function(){ return false; };
+document.oncut = function(){ return false; };
+document.onpaste = function(){ return false; };
+
+</script>
+
+<noscript>
+<iframe src="*.htm"></iframe>
+</noscript>
+
+</head>
+<br><H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_51.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_53.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<hr width=100% size=2 color=#6a505c style="border:3 dashed #6a505c">
+<body class="code_page code_text"><pre class="code_page"><table cellspacing="0" cellpadding="0" class="code_page"><tr><td><table cellspacing="0" cellpadding="0" class="code_page"><tr><td valign="top" id="L_0_1" class="code_text code_gutter" style="background: #767572"><span style="color: #aaa18d;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td valign="top" class="code_text code_line" style="background-color: #a59f92;"><div id="C_0_1"><span class="normal real_text" style="background-color: #a59f92; color: #181818;"> </span></div></td></tr><tr><td id="L_0_2992" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2992&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2992" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">：：：第五十二章&nbsp;&nbsp;&nbsp; 旧友重逢</span>
+</div></td></tr><tr><td id="L_0_2993" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2993&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2993" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2994" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2994&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2994" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">窗外嘈杂起来，翡翠岭小广场上，人群发出阵阵欢呼喝彩。</span>
+</div></td></tr><tr><td id="L_0_2995" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2995&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2995" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">车手们都回来了，</span>”汉娜站起身，“<span class="qts_spk">今天是选车大赛最后一天，看来胜负已决，走，我们去看看。</span>”</span>
+</div></td></tr><tr><td id="L_0_2996" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2996&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2996" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken，秦翀跟随汉娜来到小广场，广场正中台子上站着几位身穿运动服的健将，每人身旁摆着辆奇特自行车。台上一位主持人大声宣讲：“<span class="qts_spk">经过十二天比赛，不同气象条件下竞速，载重测试，选车赛评审委员会作出终审评测，请汉娜市长向大家宣布第三届选车大赛结果！</span>”</span>
+</div></td></tr><tr><td id="L_0_2997" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2997&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2997" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;"><span class="qts_lnk"><img src="https://s1.ax1x.com/2020/10/04/0Jerh4.jpg" style="width:694px;height:390px;" alt="〔⦂⏿〕" > <img src="https://s1.ax1x.com/2020/10/04/0Jey9J.jpg" style="width:694px;height:390px;" alt="〔⦂⏿〕" ></span></span>
+</div></td></tr><tr><td id="L_0_2998" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2998&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2998" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_2999" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;2999&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_2999" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜走上台，接过主持人手中一只信封，打开大声宣布：“<span class="qts_spk">静谷市第三届选车大赛，冠军车型——盐业组参赛作品P30，亚军——冶金组参赛作品V6D，这两种车型将会量产，成为静谷市民下面五年的主要代步工具。</span>”</span>
+</div></td></tr><tr><td id="L_0_3000" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3000&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3000" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">台下人群爆发出热烈掌声，向优胜者祝贺。忽然，翡翠岭南面山梁上出现一股烟尘，接着传来机车轰鸣声，只见十几量摩托一字排开，停在山梁上，其中有人挥舞旗子发出阵阵怪叫，摩托车手轰着油门，发动机声音震天响。</span>
+</div></td></tr><tr><td id="L_0_3001" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3001&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3001" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">真可恶，铁矿山的机车党又来捣乱！</span>”</span>
+</div></td></tr><tr><td id="L_0_3002" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3002&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3002" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">就知道今天他们不会消停，来凑热闹起哄！</span>”</span>
+</div></td></tr><tr><td id="L_0_3003" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3003&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3003" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">下半年就开挖新矿区，看他们还能神气多久。</span>”</span>
+</div></td></tr><tr><td id="L_0_3004" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3004&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3004" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀听到人群里议论纷纷。</span>
+</div></td></tr><tr><td id="L_0_3005" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3005&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3005" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3006" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3006&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3006" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦挤出人群，拿起通话器，指着远处山梁吩咐了几句，不到半分钟，静谷方向，12架单人多轴飞行器起飞，直扑起哄的机车党。看到空中一下子飞来十二名治安官，机车党一阵大呼小叫，开动摩托，朝远离翡翠岭的方向驶去，机车轰鸣声渐行渐远。</span>
+</div></td></tr><tr><td id="L_0_3007" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3007&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3007" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">不愉快的小插曲过后，人群注意力又回到台上，汉娜给两个获奖小组颁奖，掌声再次响起。颁奖仪式后，有演唱者登台表演，台上台下互动连连，人群沉浸在节日气氛中。</span>
+</div></td></tr><tr><td id="L_0_3008" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3008&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3008" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3009" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3009&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3009" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜把Ken和秦翀叫出人群：“<span class="qts_spk">这会儿我手头还有些事情要处理，请洛伦带你们先四处转转，熟悉下静谷目前的情况，晚上我们再碰头。</span>”</span>
+</div></td></tr><tr><td id="L_0_3010" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3010&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3010" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">好，你先忙，那晚上见。</span>”Ken。</span>
+</div></td></tr><tr><td id="L_0_3011" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3011&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3011" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3012" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3012&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3012" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">洛伦领着二人先来到离翡翠岭最近的陶土生产中心。陶土生产中心位于之前那个简易砖窑旧址，当年刚到N31的时候，汉娜、Ken、秦翀、马丁四人忙活一个多月建造的小砖窑已被拆除，取而代之的是两排大型厂房。</span>
+</div></td></tr><tr><td id="L_0_3013" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3013&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3013" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">工作人员介绍说，陶土中心建成的最初几年，主要为殖民地扩建工程供应建筑材料，随着定居点的工业发展，现在这里也生产各种瓷器，工业贮藏器皿，玻璃等产品，翡翠岭钢架穹顶镶嵌的数万片玻璃，就产自这里。</span>
+</div></td></tr><tr><td id="L_0_3014" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3014&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3014" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3015" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3015&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3015" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">从陶土中心出来，三人来到静谷西南郊的水电站，Ken和秦翀清楚地记得，“<span class="qts_spk">半年前</span>”考察过这段山间河流，没想到当年纸面上的水电站已建成发电多年。</span>
+</div></td></tr><tr><td id="L_0_3016" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3016&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3016" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">电站工程师向二人介绍，水电站投入使用后，结合西风口的风电厂和辅助性光伏阵列，大大提高了殖民地电网的稳定性，为静谷市提供可靠的能源供给。</span>
+</div></td></tr><tr><td id="L_0_3017" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3017&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3017" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3018" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3018&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3018" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">离水电站不远处是一座金属熔炼厂，每到“<span class="qts_spk">晚上</span>”用电低谷，金属熔炼厂便开动几十座电炉提炼金属，为殖民地的工厂提供金属原材料。</span>
+</div></td></tr><tr><td id="L_0_3019" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3019&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3019" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">参观完金属熔炼厂，洛伦告诉二人：“<span class="qts_spk">渔业组和盐业化工组在星河湾，下个月那里轮值换班，到时候再派人带你们去看看。刚才汉娜通知我，她为你们准备了欢迎晚宴，我们现在回去，别让朋友们等得太久。</span>”</span>
+</div></td></tr><tr><td id="L_0_3020" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3020&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3020" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3021" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3021&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3021" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">一行人返回翡翠岭，来到一座餐厅，三人走进房间时，餐厅里几十个人立刻安静下来。</span>
+</div></td></tr><tr><td id="L_0_3022" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3022&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3022" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">秦翀！</span>”一位中年男子喊道。</span>
+</div></td></tr><tr><td id="L_0_3023" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3023&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3023" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀努力辨认喊出自己名字的人：“<span class="qts_spk">梁晴枫！是你？</span>”秦翀简直不敢相信自己的眼睛，彼时瘦瘦高高的白面书生，现已变成满脸胡子茬的粗壮中年大叔。更夸张的是一旁站着的黑客刘，啤酒肚圆滚滚隆起，头发虽然老长，可顶已秃，原本标志性的圆墨镜变成了老花镜，秦翀不禁感慨，时间真是把杀猪刀。</span>
+</div></td></tr><tr><td id="L_0_3024" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3024&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3024" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3025" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3025&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3025" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">阔别多年的老友们跟秦翀握手拥抱，一旁汉娜向Ken介绍一位跟他年龄相仿的高个男子，两人相拥相泣，此人正是Ken的儿子。</span>
+</div></td></tr><tr><td id="L_0_3026" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3026&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3026" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">欢迎晚宴在座的还有农业组负责人马丁，核专家埃瑞克，前蓝川公司深空实验室负责人高飏等人，都是Ken和秦翀的老友。</span>
+</div></td></tr><tr><td id="L_0_3027" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3027&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3027" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">还有几位素茹会的老同事，这个月在星河湾轮值当班，没办法赶回来，后面再和你们俩碰头。</span>”汉娜端起酒杯，“<span class="qts_spk">来！我们一起欢迎Ken和秦翀归来！</span>”</span>
+</div></td></tr><tr><td id="L_0_3028" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3028&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3028" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">大家举杯同庆，旧友重逢，父子相聚，一席人畅谈甚欢。</span>
+</div></td></tr><tr><td id="L_0_3029" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3029&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3029" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3030" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3030&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3030" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">席间秦翀问道：“<span class="qts_spk">怎么没看见吴佑問，Richard和西蒙？</span>”</span>
+</div></td></tr><tr><td id="L_0_3031" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3031&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3031" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">谈笑声止，众人不语。</span>
+</div></td></tr><tr><td id="L_0_3032" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3032&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3032" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">汉娜放下手中的酒杯：“<span class="qts_spk">七年前，最后一艘离开地球的飞船出了问题，西蒙留在了地球…</span>”</span>
+</div></td></tr><tr><td id="L_0_3033" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3033&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3033" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">秦翀面露困惑：“<span class="qts_spk">西蒙乘坐的飞船出了问题？那吴…</span>”</span>
+</div></td></tr><tr><td id="L_0_3034" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3034&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3034" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">“<span class="qts_spk">过会儿，我带你们去见吴佑問和Richard教授。</span>”汉娜缓缓道。</span>
+</div></td></tr><tr><td id="L_0_3035" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3035&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3035" style="width: 808px;" class="wrap"><span class="normal real_text" style="background-color: #a59f92; color: #181818;">Ken和秦翀觉察出餐厅里气氛异样，没再追问。</span>
+</div></td></tr><tr><td id="L_0_3036" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3036&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3036" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3037" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3037&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3037" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3038" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3038&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3038" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span>
+</div></td></tr><tr><td id="L_0_3039" class="code_text code_gutter" style="background: #767572" valign="top"><span style="color: #aaa18d;">&nbsp;3039&nbsp;</span></td><td class="code_text code_line" style="background-color: #a59f92;" valign="top"><div id="C_0_3039" style="width: 808px;" class="wrap"><span class="normal empty_text" style="background-color: #a59f92; color: #181818;">&nbsp;</span></div></td></tr></table></td></tr></table></pre><div id="toolbarhide"><div id="toolbar"></div></div>
+
+<script type="text/javascript">
+var page_line_info = {
+wrap: false,
+ranges: null,
+wrap_size: null,
+tables: null,
+header: null,
+gutter: false,
+table_mode: true
+};
+
+function wrap_code() {
+var width = 0,
+mode = null,
+start, end, i, j, idx, el;
+
+if (page_line_info.header) {
+el = document.getElementById("file_info");
+el.style.width = page_line_info.wrap_size + "px";
+el.className = "wrap";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+if (isNull(mode)) {
+mode = true;
+if (page_line_info.gutter) {
+width = document.getElementById("L_" + idx + "_" + j).offsetWidth;
+}
+}
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = (page_line_info.wrap_size - width) + "px";
+el.className = page_line_info.table_mode ? "wrap" : "wrap code_line";
+}
+}
+}
+
+function toggle_gutter() {
+var default_mode = page_line_info.table_mode ? 'table-cell' : 'inline-block',
+mode = null,
+i, j, rows, r, tbls, cells;
+items = document.querySelectorAll('.code_gutter');
+/* alert(document.getElementsByClassName("code_page").style("textShadow"));*/
+for (i = 0; i < items.length; ++i) {
+if (isNull(mode)) {
+if (page_line_info.gutter) {
+mode = 'contents';
+page_line_info.gutter = false;
+page_line_info.wrap_size = 712;
+} else {
+mode = 'table-cell';
+page_line_info.gutter = true;
+page_line_info.wrap_size = 780;
+}
+}
+items[i].style.display = mode;
+}
+if (page_line_info.wrap && !isNull(mode)) {
+setTimeout(function() {wrap_code();}, 500);
+}
+}
+
+function unwrap_code() {
+var i, j, idx, start, end, el;
+
+if (page_line_info.header) {
+document.getElementById("file_info").style.width = "100%";
+}
+for (i = 1; i <= page_line_info.tables; i++) {
+idx = i - 1;
+start = page_line_info.ranges[idx][0];
+end = page_line_info.ranges[idx][1];
+for(j = start; j < end; j++) {
+el = document.getElementById("C_" + idx + "_" + j);
+el.style.width = "100%";
+el.className = "";
+}
+}
+}
+
+function toggle_wrapping() {
+if (page_line_info.wrap) {
+page_line_info.wrap = false;
+unwrap_code();
+} else {
+page_line_info.wrap = true;
+wrap_code();
+}
+}
+
+page_line_info.wrap       = false;
+page_line_info.wrap_size  = 780;
+page_line_info.tables     = 1;
+page_line_info.header     = false;
+page_line_info.gutter     = true;
+page_line_info.table_mode = true;
+page_line_info.ranges     = [[2992,999999]];
+</script>
+<script type="text/javascript">
+toggle_wrapping();
+</script>
+</body>
+<body topmargin="0" oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+</body>
+<br>
+<hr align="center" width=100% size=2 color=#6a505c style="border:3 dashed #6a505c; ">
+
+<H40 style="font-weight:normal; font-size: 15pt; font-style: normal; padding-left:105px;" >（⚵）科幻小说『载体空间』<span style="color: #181818; padding-left:132px;" ><a style="text-decoration: none; color:#693153;font-size: 12pt; padding-left:25px; padding-right:25px;" href="carrier_space_chapter_51.html" target="_self">上一章</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="https://sf2030.github.io" target="_blank">返回目录</a><a style="text-decoration: none; color:#693153; padding-left:25px; padding-right:25px; font-size: 12pt;" href="carrier_space_chapter_53.html" target="_self">下一章 </a> </span>
+
+</H40><a style="outline:none;font-size:15pt;font-weight:normal;text-decoration:none;color:#693153;" href="#" onclick="toggle_gutter();">⨊</a>
+<br><br>
+</html>
